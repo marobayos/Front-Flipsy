@@ -1,5 +1,5 @@
 # Flipsy
-Flipsy is the software implementation presented as a project in the Software Engineering II course at the Universidad Nacional de Colombia
+Flipsy is pretended to be a solution to the quick accessibility of keynotes for exams or any specific subject, so anyone can check on that at any moment retaining the concepts much longer in time with several dynamics as practice notifications, weekly competitions, etcetera.
 
 ## Problem:
 
