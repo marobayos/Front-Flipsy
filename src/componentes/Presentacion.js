@@ -32,7 +32,7 @@ class Presentacion extends React.Component {
         };
         this.handleClick = this.handleClick.bind(this);
     }
-    s
+
 
     handleClick(e) {
         e.preventDefault();
@@ -57,7 +57,7 @@ class Presentacion extends React.Component {
                                 Flipsy
                             </Typography>
                             <Typography variant="h5" align="center" color="textSecondary" paragraph >
-                                Descripcion del conjunto de flaschards o del usuarui
+                                Descripcion del conjunto de flaschards o del usuarios
                             </Typography>
                             <div >
                                 <Grid container spacing={2} justify="center">
@@ -87,11 +87,7 @@ class Presentacion extends React.Component {
                                         <Typography variant="h6" align="center" color="textSecondary" paragraph>
                                             A       Parte frontal de la tarjeta aqui puede ir una imagen u otras cosas
                                         </Typography>
-
                                     </CardContent>
-
-
-
                                     <CardContent class="cont_1" key="back" onClick={this.handleClick}>
 
                                         <Typography variant="h6" align="center" color="textSecondary" paragraph>
@@ -101,10 +97,7 @@ class Presentacion extends React.Component {
                                     </CardContent>
                                 </ReactCardFlip>
                             </Grid>
-
                         </Grid>
-
-
                     </Container>
                 </main>
 
