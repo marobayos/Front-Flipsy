@@ -10,9 +10,10 @@
 }*/
 
 .img-regis{
-  width: 50%;
-  max-width: 400px;
-  height: 20%;
+  margin-top: 5%;
+  height: 70%;
+  width: 60%;
+  max-height: 80%;
 }
 
 /*.App-header {
@@ -39,13 +40,6 @@
   }
 }*/
 
-
-.App{
-  background: #373B44;  /* fallback for old browsers */
-  background: -webkit-linear-gradient(to right, #4286f4, #373B44);  /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(to right, #4286f4, #373B44); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-}
-
 .MuiInput-underline::after{
    border-bottom: 2px solid #ffffff !important;
  }
@@ -62,3 +56,23 @@
   background: #FFFFFD !important;
 }
 
+.registro{
+  background: #013C63;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #0A648F, #013C63);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #0A648F, #013C63); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  height: 100%;
+}
+
+.wave{
+  content: '';
+  top: 0;
+  left: 0;
+  height: 50%;
+  background-image: url("componentes/ondaBlanca.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.formRegis{
+  margin-top: 3%;
+}

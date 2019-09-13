@@ -16,7 +16,7 @@ let theme = createMuiTheme(
                 root: {
                     color: "white",
                     "&$focused": { // increase the specificity for the pseudo class
-                        color: "white"
+                        color: "white",
                     }
                 }
             },
@@ -37,6 +37,14 @@ let theme = createMuiTheme(
                     "&$focused": { // increase the specificity for the pseudo class
                         color: "white"
                     }
+                }
+            },
+            MuiFormControl:{
+                root:{
+                    width:"80%"
+                },
+                marginDense:{
+                    width:"100%",
                 }
             }
         }
@@ -76,10 +84,13 @@ class Registro extends Component{
 
     render (){
         return(
-            <div>
-                <img src={regis} className="img-regis" alt="logo" />
+            <div className="registro">
+                <div className="wave">
 
-                <form onSubmit={this.handleSubmit}>
+                <img src={regis} className="img-regis" alt="logo-registro" />
+                </div>
+
+                <form className="formRegis" onSubmit={this.handleSubmit}>
                     <FormControl>
                         <ThemeProvider theme={theme}>
                             <FormGroup>
@@ -132,6 +143,7 @@ class Registro extends Component{
                         </ThemeProvider>
                     </FormControl>
                 </form>
+
             </div>
         )
     }
