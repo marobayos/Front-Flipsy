@@ -16,30 +16,6 @@
   max-height: 80%;
 }
 
-/*.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotateY(0deg);
-  }
-  to {
-    transform: rotateY(360deg);
-  }
-}*/
-
 .MuiInput-underline::after{
    border-bottom: 2px solid #ffffff !important;
  }
@@ -63,16 +39,53 @@
   height: 100%;
 }
 
-.wave{
-  content: '';
-  top: 0;
-  left: 0;
+.bluepart{
+  background: #013C63;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #0A648F, #013C63);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #0A648F, #013C63); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  height: 100%;
+}
+
+.whitepart{
+  background: #ffffff;  /* fallback for old browsers */
   height: 50%;
-  background-image: url("componentes/ondaBlanca.png");
-  background-repeat: no-repeat;
-  background-size: cover;
+  width: 100%;
+  position: absolute;
+  font-weight: bold;
+  bottom: 0em;
+}
+
+.container{
+  size: 5em;
+  position: center;
+  width: 70%;
+  height: 100%;
+  align-self: center;
+  background: antiquewhite;
+  margin: auto;
 }
 
 .formRegis{
   margin-top: 3%;
+}
+
+.formCorreo{
+  margin-top: 3%;
+  color: black;
+}
+
+.buttonBlue{
+  size: 1.5em;
+  font-weight: 200;
+  background: #16608f;
+  color: white;
+  padding: 0.4pc;
+  width: 100%;
+  border-color: #16608f;
+  position: center;
+  horiz-align: center;
+}
+
+.textFieldBlue{
+
 }

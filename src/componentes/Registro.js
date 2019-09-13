@@ -72,7 +72,7 @@ class Registro extends Component{
     }
 
     handleSubmit(e){
-        
+
     }
 
     handleChecked(e) {
@@ -87,7 +87,7 @@ class Registro extends Component{
             <div className="registro">
                 <div className="wave">
 
-                <img src={regis} className="img-regis" alt="logo-registro" />
+                    <img src={regis} className="img-regis" alt="logo-registro" />
                 </div>
 
                 <form className="formRegis" onSubmit={this.handleSubmit}>
