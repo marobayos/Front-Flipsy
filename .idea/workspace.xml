@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e6c476ee-9e83-489a-8663-c10dd929889b" name="Default Changelist" comment="Solucion de errores tipograficos">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="e6c476ee-9e83-489a-8663-c10dd929889b" name="Default Changelist" comment="Solucion de errores tipograficos" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -108,7 +106,7 @@
       <workItem from="1568389852061" duration="10892000" />
       <workItem from="1568401543370" duration="1471000" />
       <workItem from="1568413191006" duration="7181000" />
-      <workItem from="1568430070560" duration="1442000" />
+      <workItem from="1568430070560" duration="1994000" />
     </task>
     <task id="LOCAL-00001" summary="Flipcard que funciona OwO">
       <created>1568416441328</created>
