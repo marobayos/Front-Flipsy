@@ -1,10 +1,4 @@
 import React, { useState } from 'react';
-import { createMuiTheme } from "@material-ui/core/styles";
-import { ThemeProvider } from "@material-ui/styles";
-import FormControlLabel from '@material-ui/core/FormControlLabel';
-import { TextField } from '@material-ui/core';
-import FormControl from '@material-ui/core/FormControl';
-import FormGroup from '@material-ui/core/FormGroup';
 import regis from '../Assets/icon.png';
 
 import { Button, Input, Checkbox } from 'antd'
@@ -26,7 +20,7 @@ const Registro = () => {
     return (
         <div className="Registro">
             <div className="wave">
-                {/* <img className="onda-blanca" src={require('./ondaBlanca.png')} alt="" /> */}
+
                 <div className="img-container">
                     <img src={regis} className="img-regis" alt="logo-registro" />
                 </div>
