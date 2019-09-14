@@ -1,4 +1,4 @@
-import React, {Component} from 'react';
+import React, { Component } from 'react';
 import { createMuiTheme } from "@material-ui/core/styles";
 import { ThemeProvider } from "@material-ui/styles";
 import FormControlLabel from '@material-ui/core/FormControlLabel';
@@ -11,77 +11,38 @@ import regis from './regis.svg';
 import Grid from '@material-ui/core/Grid';
 
 
-/*let theme = createMuiTheme(
-    {overrides: {
-            MuiInputLabel: { // Name of the component ⚛️ / style sheet
-                root: {
-                    color: "white",
-                    "&$focused": { // increase the specificity for the pseudo class
-                        color: "white",
-                    }
-                }
-            },
-            MuiInput: { // Name of the component ⚛️ / style sheet
-                root: {
-                    color: "white",
-                    "&$focused": { // increase the specificity for the pseudo class
-                        color: "white"
-                    }
-                },
-                underline:{
-                    borderBottomColor:"white"
-                }
-            },
-            MuiTypography:{
-                body1: {
-                    color: "white",
-                    "&$focused": { // increase the specificity for the pseudo class
-                        color: "white"
-                    }
-                }
-            },
-            MuiFormControl:{
-                root:{
-                    width:"80%"
-                },
-                marginDense:{
-                    width:"100%",
-                }
-            }
-        }
-    });*/
 
-class CodConf extends Component{ //codigo de confirmacion
-    constructor(){
+class CodConf extends Component { //codigo de confirmacion
+    constructor() {
         super();
         this.state = {
-            n1:'',
-            n2:'',
-            n3:'',
+            n1: '',
+            n2: '',
+            n3: '',
             n4: ''
         };
         this.handleInput = this.handleInput.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);
     }
 
-    handleInput(e){
-        const {value,name} = e.target;
+    handleInput(e) {
+        const { value, name } = e.target;
         this.setState({
-            [name]:value
+            [name]: value
         })
     }
 
-    handleSubmit(e){
+    handleSubmit(e) {
 
     }
 
-    render (){
-        return(
+    render() {
+        return (
             <div className="CodConf">
                 <label>
                     <p>
                         Te hemos enviado al correo <span className="azul">un código de 4 dígitos
-                        <br/> Ingresalo aquí </span> para continuar.
+                        <br /> Ingresalo aquí </span> para continuar.
                     </p>
                 </label>
                 <label>
@@ -91,41 +52,41 @@ class CodConf extends Component{ //codigo de confirmacion
 
                     <FormControl>
 
-                            <FormGroup>
-                                <TextField
-                                    inputProps={{ style: { textAlign: 'center', fontSize:'xx-large'}}}
-                                    onChange ={this.handleInput}
-                                    name = 'n1'
-                                    required= {true}
-                                    margin= 'dense'
-                                    type= 'number'
-                                />
+                        <FormGroup>
+                            <TextField
+                                inputProps={{ style: { textAlign: 'center', fontSize: 'xx-large' } }}
+                                onChange={this.handleInput}
+                                name='n1'
+                                required={true}
+                                margin='dense'
+                                type='number'
+                            />
 
-                                <TextField
-                                    inputProps={{ style: { textAlign: 'center', fontSize:'xx-large'}}}
-                                    onChange ={this.handleInput}
-                                    name = 'n2'
-                                    required= {true}
-                                    margin= 'dense'
-                                    type= 'number'
-                                />
-                                <TextField
-                                    inputProps={{ style: { textAlign: 'center', fontSize:'xx-large'}}}
-                                    onChange ={this.handleInput}
-                                    name = 'n3'
-                                    required= {true}
-                                    margin= 'dense'
-                                    type= 'number'
-                                />
-                                <TextField
-                                    inputProps={{ style: { textAlign: 'center', fontSize:'xx-large'}}}
-                                    onChange ={this.handleInput}
-                                    name = 'n4'
-                                    required= {true}
-                                    margin= 'dense'
-                                    type= 'number'
-                                />
-                            </FormGroup>
+                            <TextField
+                                inputProps={{ style: { textAlign: 'center', fontSize: 'xx-large' } }}
+                                onChange={this.handleInput}
+                                name='n2'
+                                required={true}
+                                margin='dense'
+                                type='number'
+                            />
+                            <TextField
+                                inputProps={{ style: { textAlign: 'center', fontSize: 'xx-large' } }}
+                                onChange={this.handleInput}
+                                name='n3'
+                                required={true}
+                                margin='dense'
+                                type='number'
+                            />
+                            <TextField
+                                inputProps={{ style: { textAlign: 'center', fontSize: 'xx-large' } }}
+                                onChange={this.handleInput}
+                                name='n4'
+                                required={true}
+                                margin='dense'
+                                type='number'
+                            />
+                        </FormGroup>
                         <Button variant="contained" color="primary" >
                             CONFIRMAR
                         </Button>
