@@ -78,6 +78,7 @@ class Registro extends Component{
     handleChecked(e) {
         this.setState({
             terminos: e.target.checked
+
         })
     };
 
