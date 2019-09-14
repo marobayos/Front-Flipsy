@@ -38,9 +38,7 @@ class Presentacion extends React.Component {
         this.setState(prevState => ({ isFlipped: !prevState.isFlipped }));
     }
     render() {
-
         return (
-
             <React.Fragment>
                 <header className="header" style={{position:"relative"}}>
                     <nav className="menuBar">
@@ -109,25 +107,21 @@ class Presentacion extends React.Component {
                             </div>
                         </Container>
                     </div>
-                    <Container >
-                        <Grid container justify="space-evenly" >
-                            <Grid item xs={12} sm={6} md={4}>
-                                <ReactCardFlip isFlipped={this.state.isFlipped} flipDirection="horizontal" class="cont_1">
-                                    <div clasName="card" class="cont_1" key="front" onClick={this.handleClick}>
-                                        <img class="flipcard" src="https://source.unsplash.com/random" alt="Front" height="100" width="100">
-                                        </img>
-                                        <Typography variant="h6" align="center" color="textSecondary" paragraph>
-                                            Parte frontal de la tarjeta aqui puede ir una imagen u otras cosas
-                                        </Typography>
-                                    </div>
-                                    <div clasName="card" class="cont_1" key="back" onClick={this.handleClick}>
-                                        <Typography variant="h6" align="center" color="textSecondary" paragraph>
-                                            Hola contenido de la tarjeta en la parte de atras aqui iran los datos y demas
-                                        </Typography>
-                                    </div>
-                                </ReactCardFlip>
-                            </Grid>
-                        </Grid>
+                    <Container className="card">
+                        <ReactCardFlip isFlipped={this.state.isFlipped} flipDirection="horizontal" class="cont_1">
+                            <div style={{width: '100%', height: '100%', 'background-color': '#ffe1df'}} class="cont_1" key="front" onClick={this.handleClick}>
+                                <img class="flipcard" src="https://source.unsplash.com/random" alt="Front" height="100" width="100">
+                                </img>
+                                <Typography variant="h6" align="center" color="textSecondary" paragraph>
+                                    Parte frontal de la tarjeta aqui puede ir una imagen u otras cosas
+                                </Typography>
+                            </div>
+                            <div class="cont_1" key="back" onClick={this.handleClick}>
+                                <Typography variant="h6" align="center" color="textSecondary" paragraph>
+                                    Hola contenido de la tarjeta en la parte de atras aqui iran los datos y demas
+                                </Typography>
+                            </div>
+                        </ReactCardFlip>
                     </Container>
                 </main>
 
