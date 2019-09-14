@@ -86,6 +86,8 @@
   horiz-align: center;
 }
 
-.textFieldBlue{
-
+.card{
+  size: 1.5em;
+  width: 40em;
+  height: 30em;
 }
