@@ -1,11 +1,6 @@
 .App {
-<<<<<<< HEAD
-  text-align: center;
-  height: 100%;
-=======
     text-align: center;
     height: 100%;
->>>>>>> 7cb968ecb9b0653e9cb1d0af41468812676ed6c8
 }
 
 /*.App-logo {
@@ -14,89 +9,6 @@
   pointer-events: none;
 }*/
 
-<<<<<<< HEAD
-.img-regis{
-  margin-top: 5%;
-  height: 70%;
-  width: 60%;
-  max-height: 80%;
-}
-
-.MuiInput-underline::after{
-   border-bottom: 2px solid #ffffff !important;
- }
-
-.MuiInput-underline::before{
-  border-bottom: 1px solid #ffffff !important;
-}
-
-.MuiCheckbox-colorPrimary.Mui-checked {
-  color: #ffffff !important;
-}
-
-.MuiButton-textPrimary {
-  background: #FFFFFD !important;
-}
-
-.registro{
-  background: #013C63;  /* fallback for old browsers */
-  background: -webkit-linear-gradient(to right, #0A648F, #013C63);  /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(to right, #0A648F, #013C63); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-  height: 100%;
-}
-
-.bluepart{
-  background: #013C63;  /* fallback for old browsers */
-  background: -webkit-linear-gradient(to right, #0A648F, #013C63);  /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(to right, #0A648F, #013C63); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-  height: 100%;
-}
-
-.whitepart{
-  background: #ffffff;  /* fallback for old browsers */
-  height: 50%;
-  width: 100%;
-  position: absolute;
-  font-weight: bold;
-  bottom: 0em;
-}
-
-.container{
-  size: 5em;
-  position: center;
-  width: 70%;
-  height: 100%;
-  align-self: center;
-  background: antiquewhite;
-  margin: auto;
-}
-
-.formRegis{
-  margin-top: 3%;
-}
-
-.formCorreo{
-  margin-top: 3%;
-  color: black;
-}
-
-.buttonBlue{
-  size: 1.5em;
-  font-weight: 200;
-  background: #16608f;
-  color: white;
-  padding: 0.4pc;
-  width: 100%;
-  border-color: #16608f;
-  position: center;
-  horiz-align: center;
-}
-
-.card{
-  size: 1.5em;
-  width: 40em;
-  height: 30em;
-=======
 .img-container {
     width: 65%;
     height: 12em;
@@ -138,6 +50,9 @@
     margin-left: 2em;
 }
 .btn-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
     margin: 1em 0;
 }
 
@@ -171,6 +86,9 @@
 }
 
 .code-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
     margin-top: 6em;
 }
 
@@ -230,5 +148,4 @@
 .CodConf .MuiFormControl-marginDense{
     width: 20%;
     margin: 5px;
->>>>>>> 7cb968ecb9b0653e9cb1d0af41468812676ed6c8
 }

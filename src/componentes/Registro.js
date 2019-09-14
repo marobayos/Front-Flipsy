@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import regis from '../Assets/icon.png';
+import ConfirmCode from './CodConf'
 
 import { Button, Input, Checkbox } from 'antd'
 
@@ -63,6 +64,7 @@ const Registro = () => {
                 </section>
             </form>
 
+            {/* <ConfirmCode /> */}
         </div>
     )
 }
