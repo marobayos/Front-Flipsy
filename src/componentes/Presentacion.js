@@ -1,16 +1,13 @@
 import React, {Component} from 'react';
 import Button from '@material-ui/core/Button';
-import CardContent from '@material-ui/core/CardContent';
 import CssBaseline from '@material-ui/core/CssBaseline';
 import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
 import Container from '@material-ui/core/Container';
 import Link from '@material-ui/core/Link';
 import ReactCardFlip from 'react-card-flip';
-import NavBar from 'react-responsive-menubar/lib/NavBar';
 
 import '../App.css';
-import {TextField} from "@material-ui/core";
 
 function Copyright() {
     return (
@@ -112,23 +109,22 @@ class Presentacion extends React.Component {
                             </div>
                         </Container>
                     </div>
-                    <Container maxWidth="md">
+                    <Container >
                         <Grid container justify="space-evenly" >
                             <Grid item xs={12} sm={6} md={4}>
-                                <ReactCardFlip clasName="card" isFlipped={this.state.isFlipped} flipDirection="horizontal" class="cont_1">
-                                    <CardContent class="cont_1" key="front" onClick={this.handleClick}>
+                                <ReactCardFlip isFlipped={this.state.isFlipped} flipDirection="horizontal" class="cont_1">
+                                    <div clasName="card" class="cont_1" key="front" onClick={this.handleClick}>
                                         <img class="flipcard" src="https://source.unsplash.com/random" alt="Front" height="100" width="100">
                                         </img>
                                         <Typography variant="h6" align="center" color="textSecondary" paragraph>
                                             Parte frontal de la tarjeta aqui puede ir una imagen u otras cosas
                                         </Typography>
-                                    </CardContent>
-                                    <CardContent class="cont_1" key="back" onClick={this.handleClick}>
-
+                                    </div>
+                                    <div clasName="card" class="cont_1" key="back" onClick={this.handleClick}>
                                         <Typography variant="h6" align="center" color="textSecondary" paragraph>
                                             Hola contenido de la tarjeta en la parte de atras aqui iran los datos y demas
                                         </Typography>
-                                    </CardContent>
+                                    </div>
                                 </ReactCardFlip>
                             </Grid>
                         </Grid>

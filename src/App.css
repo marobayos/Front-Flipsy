@@ -115,12 +115,9 @@
   height: 40px;
   background-color: #16608f;
 }
-
-.icon hover {
-  background-color: #1782be;
-}
-
 .card{
   background-color: #ffe9c9;
-
+  color: red;
+  width: 30em;
+  height: 20em;
 }
