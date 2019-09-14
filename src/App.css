@@ -3,12 +3,6 @@
   height: 100%;
 }
 
-/*.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
-  pointer-events: none;
-}*/
-
 .img-regis{
   margin-top: 5%;
   height: 70%;
@@ -86,6 +80,47 @@
   horiz-align: center;
 }
 
-.textFieldBlue{
+.menuBar ul {
+  display: flex;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.menuBar a {
+  padding: 0.7em;
+  display: block;
+  background-color: #16608f;
+  font-weight: bold;
+  text-decoration: none;
+  color: #ffffff;
+}
+
+.menuBar a:hover {
+  background-color: #1782be;
+}
+
+.menuBar ul li ul {
+  display: none;
+}
+
+.menuBar ul li a:hover + ul, .menuCSS3 ul li ul:hover {
+  display: block;
+}
+
+.icon{
+  padding: 0.5em;
+  margin: 0px;
+  width: 210%;
+  height: 40px;
+  background-color: #16608f;
+}
+
+.icon hover {
+  background-color: #1782be;
+}
+
+.card{
+  background-color: #ffe9c9;
 
 }

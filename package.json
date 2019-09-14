@@ -5,15 +5,18 @@
   "dependencies": {
     "@material-ui/core": "^4.4.2",
     "apollo-client-preset": "^1.0.8",
+    "bootstrap": "^4.3.1",
     "graphql": "^14.5.4",
     "graphql-tag": "^2.10.1",
     "material-ui": "^0.20.2",
     "react": "^16.9.0",
     "react-apollo": "^3.1.0",
+    "react-bootstrap": "^1.0.0-beta.12",
     "react-card-flip": "^0.8.1",
     "react-dom": "^16.9.0",
     "react-form-validator-core": "^0.6.4",
     "react-material-ui-form-validator": "^2.0.9",
+    "react-responsive-menubar": "^1.0.1",
     "react-scripts": "3.1.1"
   },
   "scripts": {
