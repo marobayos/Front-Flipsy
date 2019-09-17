@@ -12,6 +12,7 @@ import Grid from '@material-ui/core/Grid';
 
 
 
+
 class CodConf extends Component { //codigo de confirmacion
     constructor() {
         super();
@@ -92,6 +93,7 @@ class CodConf extends Component { //codigo de confirmacion
                         </Button>
                     </FormControl>
                 </form>
+
 
             </div>
         )
