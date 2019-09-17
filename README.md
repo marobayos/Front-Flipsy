@@ -1,15 +1,3 @@
-<<<<<<< HEAD
-# Flipsy
-Flipsy is pretended to be a solution to the quick accessibility of keynotes for exams or any specific subject, so anyone can check on that at any moment retaining the concepts much longer in time with several dynamics as practice notifications, weekly competitions, etcetera.
-
-## Problem:
-
-[Insert here the problem statement]
-
-## Solution:
-
-[Insert here the solution statement]
-=======
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
@@ -78,4 +66,3 @@ This section has moved here: https://facebook.github.io/create-react-app/docs/de
 ### `npm run build` fails to minify
 
 This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
->>>>>>> 7cb968ecb9b0653e9cb1d0af41468812676ed6c8
