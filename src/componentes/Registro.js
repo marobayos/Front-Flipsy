@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import regis from '../Assets/icon.png';
 import ConfirmCode from './CodConf'
+import { Auth } from 'aws-amplify'
 
 import { Button, Input, Checkbox } from 'antd'
 
@@ -13,8 +14,26 @@ const Registro = () => {
         terminos: false
     })
 
-    const handleSubmit = () => {
+    const ValidateCredentials = () => {
+        signUpCredentials.terminos
+            ? handleSubmit()
+            : alert("Debes aceptar los términos y condiciones")
+    }
 
+    const handleSubmit = async () => {
+        const { correo, usuario, contra } = signUpCredentials
+        try {
+            let newUser = await Auth.signUp({
+                username: correo,
+                password: contra,
+                attributes: {
+                    email: correo
+                }
+            })
+            console.log(newUser)
+        } catch (error) {
+            console.log(error)
+        }
     }
 
 
@@ -56,7 +75,7 @@ const Registro = () => {
                 </section>
 
                 <section className="btn-container">
-                    <Button onClick={() => console.log(signUpCredentials)} type="primary"> Registrarse </Button>
+                    <Button onClick={ValidateCredentials} type="primary"> Registrarse </Button>
                 </section>
 
                 <section className="code-container">
