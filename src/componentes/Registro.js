@@ -1,12 +1,16 @@
-import React, { useState } from 'react';
+import React, { useState, useContext } from 'react';
 import regis from '../Assets/icon.png';
 import ConfirmCode from './CodConf'
+import '../Styles/Signup.css'
 import { Auth } from 'aws-amplify'
-
 import { Button, Input, Checkbox } from 'antd'
+import Context from '../GlobalState/context'
+import { withRouter } from 'react-router-dom'
 
 
-const Registro = () => {
+
+const Registro = props => {
+    const { state, actions } = useContext(Context)
     const [signUpCredentials, setSignUpCredentials] = useState({
         correo: '',
         usuario: '',
@@ -30,7 +34,18 @@ const Registro = () => {
                     email: correo
                 }
             })
-            console.log(newUser)
+                .then(() => {
+                    actions({
+                        type: "setState",
+                        payload: {
+                            user_credentials: {
+                                email: correo
+                            }
+                        }
+                    })
+                    props.history.push('confirm-code')
+                })
+
         } catch (error) {
             console.log(error)
         }
@@ -42,7 +57,7 @@ const Registro = () => {
             <div className="wave">
 
                 <div className="img-container">
-                    <img src={regis} className="img-regis" alt="logo-registro" />
+                    <img onClick={() => console.log(state)} src={regis} className="img-regis" alt="logo-registro" />
                 </div>
             </div>
 
@@ -50,20 +65,20 @@ const Registro = () => {
 
                 <section className="inputs-container">
                     <Input
-                        className="input"
+                        className="signup-input"
                         onChange={e => setSignUpCredentials({ ...signUpCredentials, correo: e.target.value })}
                         placeholder="Correo Electrónico"
 
                     />
 
                     <Input
-                        className="input"
+                        className="signup-input"
                         onChange={e => setSignUpCredentials({ ...signUpCredentials, usuario: e.target.value })}
                         placeholder="Nombre de Usuario"
                     />
 
                     <Input
-                        className="input"
+                        className="signup-input"
                         onChange={e => setSignUpCredentials({ ...signUpCredentials, contra: e.target.value })}
                         type="password"
                         placeholder="Contraseña"
@@ -88,4 +103,4 @@ const Registro = () => {
     )
 }
 
-export default Registro;
+export default withRouter(Registro);

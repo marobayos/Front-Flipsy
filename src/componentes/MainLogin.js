@@ -14,7 +14,7 @@ const MainLogin = props => {
     return (
         <div className='login-main-container'>
             <div className="img-logo-container">
-                <img className="img-logo" src={require('./LogoLogin.PNG')} alt="" />
+                <img className="img-logo" src={require('../Assets/LogoLogin.PNG')} alt="" />
             </div>
 
             <section className="form-container">
