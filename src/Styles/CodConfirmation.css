@@ -12,6 +12,7 @@
 }
 .code-animation-container {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     animation: pop 300ms;
@@ -47,6 +48,18 @@
 } 
 .swal2-title {
     color: white !important;
+}
+
+.swal2-content {
+    color: white !important;
+}
+
+.swal2-footer {
+    color: white !important;
+}
+
+.swal2-confirm {
+    background: rgb(187, 0, 56) !important;
 }
 
 .swal2-header {

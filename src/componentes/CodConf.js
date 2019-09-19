@@ -5,12 +5,14 @@ import InputMask from 'react-input-mask';
 import Swal from 'sweetalert2'
 import { Auth } from 'aws-amplify'
 import { withRouter } from 'react-router-dom'
+import Context from '../GlobalState/context';
 
 
 
 const CodConfirmation = props => {
 
     const [code, setCode] = useState("")
+    const { state, actions } = useContext(Context)
 
     const Toast = Swal.mixin({
         toast: true,
@@ -29,7 +31,7 @@ const CodConfirmation = props => {
     }
 
     const ConfirmCode = () => {
-        Auth.confirmSignUp("ronald.prato@unet.edu.ve", code.replace(/ /g, ""))
+        Auth.confirmSignUp(state.user_credentials.email, code.replace(/ /g, ""))
             .then(data => props.history.push('home'))
             .catch(error => {
                 Toast.fire({
@@ -42,7 +44,7 @@ const CodConfirmation = props => {
     return (
         <div className='codconf-container'>
             <section className="code-animation-container">
-                <h2 className="code-title">Inserta el código</h2>
+                <h2 onClick={() => console.log(state.user_credentials)} className="code-title">Inserta el código</h2>
                 <InputMask value={code} onChange={e => setCode(e.target.value)} className="code-input" mask="9 9 9 9 9 9" maskChar="" />
                 <Button className="code-btn" onClick={ValidateCode} type="primary"> Aceptar </Button>
             </section>

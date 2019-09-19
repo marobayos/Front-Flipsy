@@ -6,6 +6,7 @@ import { Auth } from 'aws-amplify'
 import { Button, Input, Checkbox } from 'antd'
 import Context from '../GlobalState/context'
 import { withRouter } from 'react-router-dom'
+import Swal from 'sweetalert2'
 
 
 
@@ -47,7 +48,14 @@ const Registro = props => {
                 })
 
         } catch (error) {
-            console.log(error)
+            Swal.fire({
+                type: 'error',
+                title: 'Error',
+                text: `
+                    La Contraseña debe contener 8 caracteres, mayúscula y minúscula y al menos un número
+                `,
+                footer: '<i> Inténtalo de nuevo :D </i>'
+            })
         }
     }
 
