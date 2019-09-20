@@ -1,9 +1,9 @@
 import React, { useState, useEffect, useContext } from 'react'
 import { Input, Button } from 'antd'
-import './Styles/MainLogin.css'
-import Login from './Login'
+import '../Styles/MainLogin.css'
+import { withRouter } from 'react-router-dom'
 
-const MainLogin = () => {
+const MainLogin = props => {
 
     const [loginCredentials, setLoginCredentials] = useState({ email: "", password: "" })
 
@@ -14,7 +14,7 @@ const MainLogin = () => {
     return (
         <div className='login-main-container'>
             <div className="img-logo-container">
-                <img className="img-logo" src={require('./LogoLogin.PNG')} alt="" />
+                <img className="img-logo" src={require('../Assets/LogoLogin.PNG')} alt="" />
             </div>
 
             <section className="form-container">
@@ -25,15 +25,15 @@ const MainLogin = () => {
             </section>
 
             <section className="login-btn-container">
-                <Button type="primary" onClick={Login}> Iniciar Sesión </Button>
+                <Button type="primary" onClick={Login}> Iniciar Sesiónss </Button>
             </section>
 
             <section className="final-options">
                 <p>¿Olvidaste la contraseña? <a href="#"> Click aquí </a> </p>
-                <p>¿No tiene cuenta? <a href="#"> Regístrate aquí </a> </p>
+                <p>¿No tiene cuenta? <a onClick={() => props.history.push('signup')}> Regístrate aquí </a> </p>
             </section>
         </div>
     )
 }
 
-export default MainLogin
+export default withRouter(MainLogin)
