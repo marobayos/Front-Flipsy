@@ -1,103 +1,55 @@
-import React, { Component } from 'react';
-import { createMuiTheme } from "@material-ui/core/styles";
-import { ThemeProvider } from "@material-ui/styles";
-import FormControlLabel from '@material-ui/core/FormControlLabel';
-import Checkbox from '@material-ui/core/Checkbox';
-import Button from '@material-ui/core/Button';
-import { TextField } from '@material-ui/core';
-import FormControl from '@material-ui/core/FormControl';
-import FormGroup from '@material-ui/core/FormGroup';
-import regis from './regis.svg';
-import Grid from '@material-ui/core/Grid';
+import React, { useState, useEffect, useContext } from 'react'
+import '../Styles/CodConfirmation.css'
+import { Input, Button } from 'antd'
+import InputMask from 'react-input-mask';
+import Swal from 'sweetalert2'
+import { Auth } from 'aws-amplify'
+import { withRouter } from 'react-router-dom'
+import Context from '../GlobalState/context';
 
 
 
+const CodConfirmation = props => {
 
-class CodConf extends Component { //codigo de confirmacion
-    constructor() {
-        super();
-        this.state = {
-            n1: '',
-            n2: '',
-            n3: '',
-            n4: ''
-        };
-        this.handleInput = this.handleInput.bind(this);
-        this.handleSubmit = this.handleSubmit.bind(this);
+    const [code, setCode] = useState("")
+    const { state, actions } = useContext(Context)
+
+    const Toast = Swal.mixin({
+        toast: true,
+        position: 'top',
+        showConfirmButton: false,
+        timer: 3000
+    })
+
+    const ValidateCode = () => {
+        code.replace(/ /g, "").length === 6
+            ? ConfirmCode()
+            : Toast.fire({
+                type: 'error',
+                title: 'El código debe contener 6 dígitos'
+            })
     }
 
-    handleInput(e) {
-        const { value, name } = e.target;
-        this.setState({
-            [name]: value
-        })
+    const ConfirmCode = () => {
+        Auth.confirmSignUp(state.user_credentials.email, code.replace(/ /g, ""))
+            .then(data => props.history.push('home'))
+            .catch(error => {
+                Toast.fire({
+                    type: 'error',
+                    title: 'El código es incorrecto'
+                })
+            })
     }
 
-    handleSubmit(e) {
-
-    }
-
-    render() {
-        return (
-            <div className="CodConf">
-                <label>
-                    <p>
-                        Te hemos enviado al correo <span className="azul">un código de 4 dígitos
-                        <br /> Ingresalo aquí </span> para continuar.
-                    </p>
-                </label>
-                <label>
-                    <p className="pequeño"> *Si sales de la aplicación, podrás ingresar el código desde el menú de inicio</p>
-                </label>
-                <form className="formConf" onSubmit={this.handleSubmit}>
-
-                    <FormControl>
-
-                        <FormGroup>
-                            <TextField
-                                inputProps={{ style: { textAlign: 'center', fontSize: 'xx-large' } }}
-                                onChange={this.handleInput}
-                                name='n1'
-                                required={true}
-                                margin='dense'
-                                type='number'
-                            />
-
-                            <TextField
-                                inputProps={{ style: { textAlign: 'center', fontSize: 'xx-large' } }}
-                                onChange={this.handleInput}
-                                name='n2'
-                                required={true}
-                                margin='dense'
-                                type='number'
-                            />
-                            <TextField
-                                inputProps={{ style: { textAlign: 'center', fontSize: 'xx-large' } }}
-                                onChange={this.handleInput}
-                                name='n3'
-                                required={true}
-                                margin='dense'
-                                type='number'
-                            />
-                            <TextField
-                                inputProps={{ style: { textAlign: 'center', fontSize: 'xx-large' } }}
-                                onChange={this.handleInput}
-                                name='n4'
-                                required={true}
-                                margin='dense'
-                                type='number'
-                            />
-                        </FormGroup>
-                        <Button variant="contained" color="primary" >
-                            CONFIRMAR
-                        </Button>
-                    </FormControl>
-                </form>
-
-
-            </div>
-        )
-    }
+    return (
+        <div className='codconf-container'>
+            <section className="code-animation-container">
+                <h2 onClick={() => console.log(state.user_credentials)} className="code-title">Inserta el código</h2>
+                <InputMask value={code} onChange={e => setCode(e.target.value)} className="code-input" mask="9 9 9 9 9 9" maskChar="" />
+                <Button className="code-btn" onClick={ValidateCode} type="primary"> Aceptar </Button>
+            </section>
+        </div>
+    )
 }
 
-export default CodConf;
+export default withRouter(CodConfirmation)
