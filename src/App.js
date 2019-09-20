@@ -3,17 +3,20 @@ import './App.css';
 import { BrowserRouter, Route, Switch } from 'react-router-dom'
 import Login from './componentes/MainLogin'
 import Registro from './componentes/Registro'
-import Verification from './componentes/Verification'
-import Confirmation from './componentes/Confirmation'
+import CodeConfirmation from './componentes/CodConf'
+import Home from './componentes/Home'
+
+
 
 function App() {
   return (
     <BrowserRouter>
       <Switch>
-        <Route path='/login' component={Login} /> 
+        <Route path="/" component={Registro} exact />
         <Route path="/signup" component={Registro} />
-        <Route path="/verification" component={Verification} />
-        <Route path="/confirm" component={Confirmation} />
+        <Route path='/signin' component={Login} />
+        <Route path='/confirm-code' component={CodeConfirmation} />
+        <Route path='/home' component={Home} />
       </Switch>
     </BrowserRouter>
   );
