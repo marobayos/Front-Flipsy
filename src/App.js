@@ -1,13 +1,17 @@
 import React from 'react';
 import './App.css';
-import Presentacion from "./componentes/Presentacion";
-import Registro from "./componentes/Registro";
+import { BrowserRouter, Route, Switch } from 'react-router-dom'
+// import Login from './componentes/MainLogin'
+import Registro from './componentes/Registro'
 
 function App() {
   return (
-    <div className="App">
-        < Presentacion />
-    </div>
+    <BrowserRouter>
+      <Switch>
+        {/* <Route path='inicio' component={Login} /> */}
+        <Route path="/signup" component={Registro} />
+      </Switch>
+    </BrowserRouter>
   );
 }
 
