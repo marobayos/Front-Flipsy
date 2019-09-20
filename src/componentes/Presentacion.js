@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import Button from '@material-ui/core/Button';
+import CardContent from '@material-ui/core/CardContent';
 import CssBaseline from '@material-ui/core/CssBaseline';
 import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
@@ -14,7 +15,7 @@ function Copyright() {
         <Typography variant="body2" color="textSecondary" align="center">
             {'Copyright © '}
             <Link color="inherit" href="">
-                Our Website
+                Your Website
             </Link>{' '}
             {new Date().getFullYear()}
             {'.'}
@@ -38,42 +39,9 @@ class Presentacion extends React.Component {
         this.setState(prevState => ({ isFlipped: !prevState.isFlipped }));
     }
     render() {
+
         return (
             <React.Fragment>
-                <header className="header" style={{position:"relative"}}>
-                    <nav className="menuBar">
-                        <ul>
-                            <li><a href="#">Inicio</a></li>
-                            <li><a href="#">Empleados</a>
-                                <ul>
-                                    <li><a href="#">Juan</a></li>
-                                    <li><a href="#">Paco</a></li>
-                                    <li><a href="#">Ramón</a></li>
-                                    <li><a href="#">María</a></li>
-                                </ul>
-                            </li>
-                            <li><a href="#">FAQ</a></li>
-                            <li><a href="#">Contacto</a>
-                                <ul>
-                                    <li><a href="#">Email</a></li>
-                                    <li><a href="#">
-
-                                    </a></li>
-                                </ul>
-
-                            </li>
-
-                            <li> <b> <img className="icon" onmouseover="this.style.backgroundColor=#999" src="../settings.svg" alt="Front"
-                                 height="100" width="100">
-                            </img> </b> <ul>
-                                <li><a href="#">Juan</a></li>
-                                <li><a href="#">Paco</a></li>
-                                <li><a href="#">Ramón</a></li>
-                                <li><a href="#">María</a></li>
-                            </ul></li>
-                        </ul>
-                    </nav>
-                </header>
                 <CssBaseline />
                 <main>
 
@@ -107,21 +75,27 @@ class Presentacion extends React.Component {
                             </div>
                         </Container>
                     </div>
-                    <Container className="card">
-                        <ReactCardFlip isFlipped={this.state.isFlipped} flipDirection="horizontal" class="cont_1">
-                            <div style={{width: '100%', height: '100%', 'background-color': '#ffe1df'}} class="cont_1" key="front" onClick={this.handleClick}>
-                                <img class="flipcard" src="https://source.unsplash.com/random" alt="Front" height="100" width="100">
-                                </img>
-                                <Typography variant="h6" align="center" color="textSecondary" paragraph>
-                                    Parte frontal de la tarjeta aqui puede ir una imagen u otras cosas
-                                </Typography>
-                            </div>
-                            <div class="cont_1" key="back" onClick={this.handleClick}>
-                                <Typography variant="h6" align="center" color="textSecondary" paragraph>
-                                    Hola contenido de la tarjeta en la parte de atras aqui iran los datos y demas
-                                </Typography>
-                            </div>
-                        </ReactCardFlip>
+                    <Container maxWidth="md">
+
+                        <Grid container justify="space-evenly" >
+
+                            <Grid item xs={12} sm={6} md={4}>
+                                <ReactCardFlip className="card" isFlipped={this.state.isFlipped} flipDirection="horizontal" class="cont_1">
+                                    <CardContent class="cont_1" key="front" onClick={this.handleClick}>
+                                        <img class="flipcard" src="https://source.unsplash.com/random" alt="Front" height="100" width="100">
+                                        </img>
+                                        <Typography variant="h6" align="center" color="textSecondary" paragraph>
+                                            Parte frontal de la tarjeta aqui puede ir una imagen u otras cosas
+                                        </Typography>
+                                    </CardContent>
+                                    <CardContent class="cont_1" key="back" onClick={this.handleClick}>
+                                        <Typography variant="h6" align="center" color="textSecondary" paragraph>
+                                            Hola contenido de la tarjeta en la parte de atras aqui iran los datos y demas
+                                        </Typography>
+                                    </CardContent>
+                                </ReactCardFlip>
+                            </Grid>
+                        </Grid>
                     </Container>
                 </main>
 
