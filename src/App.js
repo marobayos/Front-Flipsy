@@ -12,7 +12,7 @@ function App() {
   return (
     <BrowserRouter>
       <Switch>
-        <Route path="/" component={Registro} exact />
+        <Route path="/" component={Login} exact />
         <Route path="/signup" component={Registro} />
         <Route path='/signin' component={Login} />
         <Route path='/confirm-code' component={CodeConfirmation} />
