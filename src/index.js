@@ -13,7 +13,6 @@ import config from './aws-exports'
 import useGlobalState from './GlobalState/useGlobalState'
 import Context from './GlobalState/context'
 
-
 Amplify.configure(config)
 
 const Index = () => {
@@ -26,7 +25,7 @@ const Index = () => {
 }
 
 
-ReactDOM.render(<Index />, document.getElementById('root'));
+ReactDOM.render(<App />, document.getElementById('root'));
 
 // If you want your app to work offline and load faster, you can change
 // unregister() to register() below. Note this comes with some pitfalls.
