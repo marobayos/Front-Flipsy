@@ -7,6 +7,7 @@ import CodeConfirmation from './componentes/CodConf'
 import Home from './componentes/Home'
 import Verification from './componentes/Verification'
 import Confirmation from './componentes/Confirmation'
+import Searcher from "./componentes/Searcher";
 
 function App() {
   return (
