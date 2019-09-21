@@ -101,12 +101,12 @@ const Registro = props => {
                     <Button onClick={ValidateCredentials} type="primary"> Registrarse </Button>
                 </section>
 
-                <section className="code-container">
+                <section  className="final-options">
                     <p>¿Ya tienes tu código? <a href="#">Ingrésalo aquí</a> </p>
+                    <p>¿Ya tienes tu cuenta? <a onClick={() => props.history.push('signin')}>Inicia sesión</a> </p>
                 </section>
-            </form>
 
-            {/* <ConfirmCode /> */}
+            </form>
         </div>
     )
 }

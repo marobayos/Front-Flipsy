@@ -1,19 +1,36 @@
 import React, { useState, useEffect, useContext } from 'react'
+import ReactDOM from 'react-dom';
+import 'antd/dist/antd.css';
+import { Layout } from 'antd';
 import Context from '../GlobalState/context'
 import { withRouter } from 'react-router-dom'
 import '../Styles/Home.css'
+import { Input } from 'antd';
 
+const { Search } = Input;
+const { Header, Footer, Sider, Content } = Layout;
 
 const Home = props => {
 
     const { state, actions } = useContext(Context)
 
     return (
-        <div className='home-main-container'>
-            <section className="home-animation-container">
-                <h2 style={{ color: 'white' }}>¡Bienvenido a Flipsy!</h2>
-            </section>
-        </div>
+        <Layout>
+            <Header className = "header">
+                <img className = "logo" src={require("../Assets/Logo-blanco.PNG")} alt="Notificaciones"/>
+                <img className = "notifications" src={require("../Assets/menu-button.svg")} alt="Notificaciones"/>
+                <img className = "notifications" src={require("../Assets/Notification.svg")} alt="Notificaciones"/>
+            </Header>
+
+            <div className = "search">
+                <Search
+                    placeholder="input search text"
+                    onSearch={value => console.log(value)}
+                />
+            </div>
+            <Content>Content</Content>
+            <Footer>Footer</Footer>
+        </Layout>
     )
 }
 
