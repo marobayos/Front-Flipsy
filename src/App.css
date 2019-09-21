@@ -46,6 +46,12 @@
     justify-content: center;
     margin-top: 2em;
 }
+
+.return{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}
 .terms-and-conditions > p {
     margin-left: 2em;
 }

@@ -1,8 +1,9 @@
 import React, { useState, useEffect, useContext } from 'react'
 import { Input, Button } from 'antd'
 import '../Styles/MainLogin.css'
+import { withRouter } from 'react-router-dom'
 
-const MainLogin  = props => {
+const MainLogin = props => {
 
     const [loginCredentials, setLoginCredentials] = useState({ email: "", password: "" })
 
@@ -24,7 +25,7 @@ const MainLogin  = props => {
             </section>
 
             <section className="login-btn-container">
-                <Button type="primary" onClick={Login}> Iniciar Sesión </Button>
+                <Button type="primary" onClick={Login}> Iniciar Sesiónss </Button>
             </section>
 
             <section className="final-options">
@@ -35,4 +36,4 @@ const MainLogin  = props => {
     )
 }
 
-export default MainLogin
+export default withRouter(MainLogin)
