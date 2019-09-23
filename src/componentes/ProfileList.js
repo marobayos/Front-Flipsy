@@ -1,6 +1,7 @@
-import {List,Avatar} from 'antd'
+import {List,Avatar,Button} from 'antd'
 import React from 'react'
 import '../Styles/ProfileList.css'
+import Swal from 'sweetalert2'
 
 const ProfileList = () => {
 
@@ -28,6 +29,13 @@ const ProfileList = () => {
         },
     ];
 
+    const addFiend = (friendName) => {
+        Swal.fire({
+            type: 'success',
+            text: "Has agregado a " + friendName,
+        })
+    }
+
     return (
         <div className='list-main-container'>
 
@@ -41,6 +49,13 @@ const ProfileList = () => {
                             avatar={<Avatar size={64} icon="user" />}
                             title={item.name}
                         />
+                        <Button
+                            type="primary"
+                            shape="circle"
+                            size={"large"}
+                            onClick={() => addFiend(item.name) }>
+                            +
+                        </Button>
                     </List.Item>
                 )}
             />
