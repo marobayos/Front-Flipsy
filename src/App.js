@@ -20,6 +20,7 @@ function App() {
         <Route path='/home' component={Home} />
         <Route path='/verification' component={Verification} />
         <Route path='/confirm' component={Confirmation} />
+        <Route path='/search' component={Searcher} />
       </Switch>
         
     </BrowserRouter>
