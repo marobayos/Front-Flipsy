@@ -19,7 +19,6 @@ const Home = props => {
             <Header className = "header">
                 <img className = "logo" src={require("../Assets/Logo-blanco.PNG")} alt="Notificaciones"/>
                 <img className = "notifications" src={require("../Assets/menu-button.svg")} alt="Notificaciones"/>
-                <img className = "notifications" src={require("../Assets/Notification.svg")} alt="Notificaciones"/>
             </Header>
 
             <div className = "search">
@@ -28,8 +27,16 @@ const Home = props => {
                     onSearch={value => console.log(value)}
                 />
             </div>
+
             <Content>Content</Content>
-            <Footer>Footer</Footer>
+
+            <Footer className="footer">
+                <img className = "footer-item" src={require("../Assets/home.svg")} alt="Notificaciones"/>
+                <img className = "footer-item" src={require("../Assets/friends.svg")} alt="Notificaciones"/>
+                <img className = "footer-item-selected" src={require("../Assets/search.svg")} alt="Notificaciones"/>
+                <img className = "footer-item" src={require("../Assets/profile.svg")} alt="Notificaciones"/>
+                <img className = "footer-item" src={require("../Assets/Notification.svg")} alt="Notificaciones"/>
+            </Footer>
         </Layout>
     )
 }
