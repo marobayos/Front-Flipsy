@@ -7,7 +7,6 @@ import ProfileList from "./ProfileList";
 const { Header, Footer} = Layout;
 
 const Searcher = () => {
-    const [verificationCredentials, setVerificationCredentials] = useState({ email: "" })
 
     const toSearch = () => {
 
@@ -23,6 +22,7 @@ const Searcher = () => {
                     <img className = "logo" src={require("../Assets/Logo-blanco.PNG")} alt="Notificaciones"/>
                     <img className = "notifications" src={require("../Assets/menu-button.svg")} alt="Notificaciones"/>
                 </Header>
+
                 <div className="search-container">
                     <Search
                         placeholder="Busca a tus amigos"
@@ -32,6 +32,7 @@ const Searcher = () => {
                 </div>
 
                 <ProfileList />
+
                 <Footer className="footer">
                     <img className = "footer-item" src={require("../Assets/home.svg")} alt="Notificaciones"/>
                     <img className = "footer-item" src={require("../Assets/friends.svg")} alt="Notificaciones"/>
