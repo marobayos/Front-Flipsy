@@ -78,10 +78,10 @@ const Home = props => {
 
             <Footer className="footer">
                 <img className = "footer-item-selected" src={require("../Assets/home-selected.svg")} alt="Home" onClick = ""/>
-                <img className = "footer-item-selected" src={require("../Assets/friends-selected.svg")} alt="Friends"/>
-                <img className = "footer-item-selected" src={require("../Assets/search-selected.svg")} alt="Search"/>
-                <img className = "footer-item-selected" src={require("../Assets/profile-selected.svg")} alt="Profile"/>
-                <img className = "footer-item-selected" src={require("../Assets/Notification-selected.svg")} alt="Notificaciones"/>
+                <img className = "footer-item" src={require("../Assets/friends.svg")} alt="Friends"/>
+                <img className = "footer-item" src={require("../Assets/search.svg")} alt="Search"/>
+                <img className = "footer-item" src={require("../Assets/profile.svg")} alt="Profile"/>
+                <img className = "footer-item" src={require("../Assets/Notification.svg")} alt="Notificaciones"/>
             </Footer>
         </Layout>
     )
