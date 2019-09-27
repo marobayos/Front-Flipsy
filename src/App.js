@@ -20,7 +20,6 @@ function App() {
         <Route path='/verification' component={Verification} />
         <Route path='/confirm' component={Confirmation} />
       </Switch>
-        
     </BrowserRouter>
   );
 }
