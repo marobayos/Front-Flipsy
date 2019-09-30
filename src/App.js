@@ -7,19 +7,22 @@ import CodeConfirmation from './componentes/CodConf'
 import Home from './componentes/Home'
 import Verification from './componentes/Verification'
 import Confirmation from './componentes/Confirmation'
+import Searcher from "./componentes/Searcher";
 import Menu from './componentes/Menu'
 
 function App() {
   return (
     <BrowserRouter>
       <Switch>
-        <Route path="/" component={Menu} exact />
+        <Route path="/" component={Login} exact />
         <Route path="/signup" component={Registro} />
         <Route path='/signin' component={Login} />
         <Route path='/confirm-code' component={CodeConfirmation} />
         <Route path='/home' component={Home} />
         <Route path='/verification' component={Verification} />
         <Route path='/confirm' component={Confirmation} />
+        <Route path='/search' component={Searcher} />
+        <Route path="/" component={Menu} exact />
       </Switch>
     </BrowserRouter>
   );
