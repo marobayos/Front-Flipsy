@@ -22,7 +22,7 @@ function App() {
         <Route path='/verification' component={Verification} />
         <Route path='/confirm' component={Confirmation} />
         <Route path='/search' component={Searcher} />
-        <Route path="/" component={Menu} exact />
+        <Route path="/menu" component={Menu} exact />
       </Switch>
     </BrowserRouter>
   );
